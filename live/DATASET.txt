@@ -1,0 +1,7 @@
+dataset=smoke-dev1
+version=v1
+mode=config
+entries=1000
+shard_size=1000
+objects=1
+delta_every=100

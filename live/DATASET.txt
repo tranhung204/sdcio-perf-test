@@ -1,7 +1,7 @@
-dataset=smoke-dev1
+dataset=tc03-two-devices
 version=v1
-mode=config
-entries=1000
+mode=configset
+entries=300000
 shard_size=1000
-objects=1
+objects=300
 delta_every=100

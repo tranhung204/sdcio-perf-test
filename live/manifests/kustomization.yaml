@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - perf-prefix-000000.yaml
+  - perf-prefix-000001.yaml
+  - perf-prefix-000002.yaml
+  - perf-prefix-000003.yaml
+  - perf-prefix-000004.yaml
+  - perf-prefix-000005.yaml
+  - perf-prefix-000006.yaml
+  - perf-prefix-000007.yaml
+  - perf-prefix-000008.yaml
+  - perf-prefix-000009.yaml

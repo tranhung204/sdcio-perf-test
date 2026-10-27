@@ -1,1 +1,0 @@
-# sdcio-perf-test

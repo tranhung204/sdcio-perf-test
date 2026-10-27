@@ -32,7 +32,7 @@ jobs:
       - name: Extract VHome S22 project
         run: |
           mkdir -p build-src
-          tar -xzf android/vhome-s22-code.tar.gz -C build-src
+          base64 -d android/vhome-s22-code.tar.xz.b64 | tar -xJ -C build-src
           test -f build-src/settings.gradle
       - name: Compile debug APK
         working-directory: build-src

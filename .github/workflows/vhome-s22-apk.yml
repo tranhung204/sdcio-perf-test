@@ -43,6 +43,14 @@ jobs:
       - name: Compile debug APK
         working-directory: build-src
         run: gradle :app:assembleDebug --no-daemon --stacktrace
+      - name: Validate APK structure and signing
+        working-directory: build-src
+        run: |
+          APK="app/build/outputs/apk/debug/app-debug.apk"
+          test -s "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/zipalign" -c -v 4 "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | head -n 8
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
